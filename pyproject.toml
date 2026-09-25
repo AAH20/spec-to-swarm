@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spec-to-swarm"
+version = "1.0.0"
+description = "Self-Assembling Autonomous Micro-Agent Swarm from an OpenAPI/RFC Spec"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Antigravity Autonomous Engineering", email = "engineering@antigravity.dev"}]
+dependencies = []
+
+[project.scripts]
+spec-to-swarm = "spec_to_swarm.cli:main"

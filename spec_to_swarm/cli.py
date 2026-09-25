@@ -52,7 +52,7 @@ SAMPLE_OPENAPI_SPEC = {
 def run_demo() -> None:
     print("=" * 76)
     print("  🐝 SPEC-TO-SWARM: AUTONOMOUS MICRO-AGENT DECOMPOSITION FROM OPENAPI")
-    print("  Frontier Multi-Agent Engine: Claude 3.7 Sonnet | OpenAI o3 | Gemini 2.5 Pro")
+    print("  Frontier Multi-Agent Engine: Claude Opus 5.5 | GPT-6 Astra | Gemini 3.8 Flash")
     print("=" * 76)
 
     t0 = time.time()

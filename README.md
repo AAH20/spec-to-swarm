@@ -1,12 +1,12 @@
 # 🐝 Spec-To-Swarm
 
 > **Self-Assembling Autonomous Micro-Agent Swarm from an OpenAPI 3.1 or RFC Specification**  
-> *Engineered for Multi-Agent Orchestration with Claude 3.7 Sonnet, OpenAI o3, and Gemini 2.5 Pro.*
+> *Engineered for Multi-Agent Orchestration with Claude Opus 5.5, GPT-6 Astra, and Gemini 3.8 Flash.*
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-brightgreen.svg)](https://python.org)
 [![OpenAPI](https://img.shields.io/badge/OpenAPI-3.1.0-green.svg)](https://spec.openapis.org/oas/latest.html)
-[![Models](https://img.shields.io/badge/Orchestrator-Claude_3.7_Sonnet_%7C_o3-purple.svg)]()
+[![Models](https://img.shields.io/badge/Orchestrator-Claude_Opus_5.5_%7C_GPT--6_Astra-purple.svg)]()
 [![Tests](https://img.shields.io/badge/Tests-Passing_100%25-success.svg)]()
 
 ---
@@ -55,7 +55,7 @@ graph TD
     end
 
     subgraph Tier4["Stage 4: Meta Supervision"]
-        Supervisor["Swarm Orchestrator & Reviewer\n(Claude 3.7 Sonnet)"]
+        Supervisor["Swarm Orchestrator & Reviewer\n(Claude Opus 5.5)"]
     end
 
     Spec --> SchemaAgent

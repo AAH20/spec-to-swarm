@@ -46,7 +46,7 @@ class MicroAgentNode:
     dependencies: List[str] = field(default_factory=list) # Agent IDs that must complete first
     system_prompt: str = ""
     assigned_tools: List[str] = field(default_factory=list)
-    recommended_model: str = "claude-3-7-sonnet-20250219" # Frontier default
+    recommended_model: str = "claude-opus-5-5" # Frontier default
 
 
 @dataclass

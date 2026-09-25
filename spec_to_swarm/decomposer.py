@@ -30,7 +30,7 @@ class SwarmDecomposer:
             target_endpoints=endpoints,
             dependencies=[],
             assigned_tools=["generate_pydantic_models", "validate_json_schema"],
-            recommended_model="claude-3-7-sonnet-20250219"
+            recommended_model="claude-opus-5-5"
         )
 
         # 2. Auth Gateway Agent (Layer 1)
@@ -43,7 +43,7 @@ class SwarmDecomposer:
             target_endpoints=[ep for ep in endpoints if ep.requires_auth],
             dependencies=[schema_agent_id],
             assigned_tools=["generate_auth_middleware", "jwt_token_validator"],
-            recommended_model="claude-3-7-sonnet-20250219"
+            recommended_model="claude-opus-5-5"
         )
 
         # 3. Domain Micro-Agents (Layer 2 - Parallel Execution)
@@ -59,7 +59,7 @@ class SwarmDecomposer:
                 target_endpoints=domain_eps,
                 dependencies=[schema_agent_id, auth_agent_id],
                 assigned_tools=["generate_fastapi_router", "implement_business_logic"],
-                recommended_model="claude-3-7-sonnet-20250219"
+                recommended_model="claude-opus-5-5"
             )
 
         # 4. Integration Test Synthesizer Agent (Layer 3 - Depends on all domain agents)
@@ -72,7 +72,7 @@ class SwarmDecomposer:
             target_endpoints=endpoints,
             dependencies=domain_agent_ids,
             assigned_tools=["generate_pytest_fixtures", "execute_contract_tests"],
-            recommended_model="claude-3-7-sonnet-20250219"
+            recommended_model="claude-opus-5-5"
         )
 
         # 5. Top-Level Supervisor
@@ -85,7 +85,7 @@ class SwarmDecomposer:
             target_endpoints=endpoints,
             dependencies=[test_agent_id],
             assigned_tools=["lint_codebase", "package_distribution"],
-            recommended_model="claude-3-7-sonnet-20250219"
+            recommended_model="claude-opus-5-5"
         )
 
         # Compute topological execution layers
